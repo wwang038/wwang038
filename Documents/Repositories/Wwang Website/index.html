@@ -14,14 +14,14 @@
 
         </div>
         
-        <div>
+        <div id = "home">
             <h1>Welcome to Winson's Website !!</h1>
         </div>
         <div class="home-text">
             <h2> This is a website about Winson. Think of it as a digital portfolio and a record of some of his work and interests.</h2>
         </div>
 
-        <div class="flex">
+        <div class="flex" id = "about" style="padding: 3%">
             <div class="div1">
                 <img src="images/about image.jpg" alt="Winson's Photo">
             </div>
@@ -35,5 +35,87 @@
             </div>
         </div>
         
+        <div id = "projects">
+            <h2 style="margin-bottom: 1%; margin-top: 5%;">Projects</h2>
+            <p style="margin-bottom: 1%;">Here are some of the projects I've worked on.</p>
+            <button class="accordion">Word Hunt Solver Website</button>
+            <div class="panel" id="word-hunt-solver">
+                <h3 style="font-weight: bold; text-align: left; font-size: 200%; padding: 0; margin-bottom: 0;">Project Overview</h3>
+                <div class="flex" style="padding: 2%; gap: 5%;">
+                    
+                    <div class="div1" style="width: 40%; height: auto; flex: none; max-width: none;padding: 0%; margin: 0%;">
+                        
+                        <img src="images/Video Project 2.gif" alt="Word Hunt Solver">
+                    </div>
+                    <div class="div2" style="padding: 0%; margin: 0%;">
+                        
+                    <p class="project-description" style="text-align: left;">The Word Hunt Solver is a full-stack 
+                        web application that solves the game pigeon game "Word Hunt" by 
+                        finding all valid words, computing optimal scoring words, and 
+                        tracking board performances relative to previous boards. 
+                        <br>
+                        <br>
+                        Users 
+                        submit a board, receive a complete solution with scores, 
+                        and view how their results compare against prior runs 
+                        through percentile statistics and an interactive leaderboard. 
+                        The system combines efficient algorithmic search with persistent 
+                        storage, enabling long-term performance tracking rather than 
+                        one-off board solves.
+    <br><br>
+                        The backend is built in Flask and exposes endpoints for
+                        board analysis, scoring, and history retrieval. A 
+                        responsive frontend presents solutions and leaderboard 
+                        data in real time. Game results are stored in PostgreSQL, 
+                        powering percentile calculations and record dashboards. The 
+                        entire application is containerized with Docker and deployed
+                    on Fly.io, with AWS RDS used for managed database hosting.</p>
+                    </div>
+                </div>
+                <h3 style="font-weight: bold; text-align: left; font-size: 200%; padding: 0; margin-bottom: 0; margin-top: 0%;">Skills & Concepts Learned</h3>
+                <div class="div2" style="padding: 0%; margin: 0%;">
+                    <p class="project-description" style="text-align: left;"></p>
+                        <ul>
+                            <li class="list-item">Full-stack web development with Flask</li>
+                            <li class="list-item">Database management with PostgreSQL and AWS RDS</li>
+                            <li class="list-item">Containerization with Docker and Fly.io</li>
+                            <li class="list-item">Algorithmic optimization with Trie-based pruning</li>
+                            <li class="list-item">Developer tooling via DataGrip for schema design, query iteration, and performance tuning</li>
+                        </ul>
+                    </p>
+                </div>
+                <h3 style="font-weight: bold; text-align: left; font-size: 200%; padding: 0; margin-bottom: 0; margin-top: 0%;  text-align: center;"><a href="https://word-hunt-solver-website-morning-mountain-1555.fly.dev/" target="_blank" style="color: #333; text-decoration: none;">Try the website here !</a></h3>
+                
+            </div>
+            
+            
+            
+        </div>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+
+                this.classList.toggle("active");
+
+                var panel = this.nextElementSibling;
+                var isOpening = !(panel.style.maxHeight && panel.style.maxHeight !== "0px");
+                
+                if (panel.style.maxHeight && panel.style.maxHeight !== "0px") {
+                panel.style.maxHeight = "0px";
+                } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+                
+                if (isOpening) {
+                    setTimeout(function() {
+                        this.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }.bind(this), 200);
+                }
+            });
+            }
+    </script>
     </body>
 </html>
