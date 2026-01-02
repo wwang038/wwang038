@@ -79,6 +79,25 @@ p {
 .home-text {
     margin-bottom: 15%;
 }
+.try-the-website a {
+    text-decoration: none;
+    color: #444;
+    transition: 1s;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    border: none;
+    outline: none;
+}
+
+.try-the-website a:hover {
+    text-decoration: underline;
+    color: #444;
+    transition: 1s;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    border: none;
+    outline: none;
+}
 .div1 {
     flex: 1;
     display: flex;
@@ -121,28 +140,66 @@ p {
     transition: 1s;
     font-family: 'Montserrat', sans-serif;
     font-size: 150%;
-    scroll-margin-top: 60px; /* Account for fixed top bar */
+    scroll-margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .accordion:hover {
+.accordion-icon {
+    font-size: 1.25rem;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+}
+
+
+
+.active, .accordion:hover {
     background-color: #ccc;
-  }
-  
-  /* Style the accordion panel. Note: hidden by default */
-  .panel {
+}
+.try-the-website {
+    background-color: #eee;
+    color: #444;
+    transition: 1s;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 100%;
+}
+.panel {
     padding: 0 18px;
     background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
-  }
+    }
+
+.right-col{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+    align-items: center;
+    }
+    
+.wip-img,
+.wip-text {
+width: 80%;
+}
+
+.wip-text{
+font-size: 100%;
+}
 
 .project-description {
     text-align: left;
     font-size: 100%;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
+    max-width: none;
 }
 
 /* Responsive: Stack accordion content vertically on smaller screens */
